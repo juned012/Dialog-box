@@ -92,6 +92,59 @@ body {
   background-color: #969696;
 }
 
+.overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0000007c;
+}
+
+.overlay-box {
+  width: 400px;
+  height: auto;
+  padding: 14px 25px;
+  background-color: white;
+  border-radius: 5px;
+  position: relative;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 0px;
+  right: 14px;
+  cursor: pointer;
+}
+
+.overlay-box button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 30px;
+  width: 100%;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-top: 10px;
+  background-color: #c71212;
+  color: white;
+}
+
+.overlay-box p {
+  color: #6e6e6e;
+  line-height: 20px;
+}
+
+.overlay-box h3 {
+  font-size: 24px;
+  color: #4b3636;
+}
+
 @media (max-width: 768px) {
   .heroSection {
     flex-direction: column;
