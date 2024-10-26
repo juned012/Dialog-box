@@ -14,11 +14,11 @@
         </h2>
       </div>
       <div class="action-btn-container">
-        <button type="button" class="action-btn">
+        <button type="button" class="action-btn" onclick="openLogin()">
           <img src="/images/login.png" alt="login icon" width="19px" />
           Login
         </button>
-        <button type="button" class="action-btn">
+        <button type="button" class="action-btn" onclick="openSignUp()">
           <img src="/images/add-user.png" alt="sign up icon" width="15px" />
           Sign up
         </button>
@@ -35,7 +35,7 @@
           communication channels, our team of experts is here to help. Join us
           and revolutionize the way you connect with your audience.
         </p>
-        <button type="button" class="link-btn">
+        <button type="button" class="link-btn" onclick="openOverlay()">
           Learn more
           <img
             src="/images/external-link.png"
@@ -51,9 +51,9 @@
         />
       </div>
     </div>
-    <div class="overlay">
+    <div class="overlay" id="overlay">
       <div class="overlay-box">
-        <p class="closeBtn">❌</p>
+        <p class="closeBtn" onclick="closeOverlay()">❌</p>
         <h3>Stay Connected with MobiPro</h3>
         <p>
           Join our community and receive the latest insights on mobile
@@ -70,5 +70,32 @@
         </button>
       </div>
     </div>
+
+    <div class="login-overlay" id="loginOverlay">
+      <div class="login-box">
+        <h3>Login Your Account</h3>
+        <p class="loginCloseBtn" onclick="closeLogin()">❌</p>
+        <form>
+          <input type="email" placeholder="Your email" required />
+          <input type="password" placeholder="Your password" required />
+          <button type="submit">Login</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="signUp-overlay" id="signUpOverlay">
+      <div class="signUp-box">
+        <h3>Create Your Account</h3>
+        <p class="signUpCloseBtn" onclick="closeSignUp()">❌</p>
+        <form>
+          <input type="text" placeholder="Your first name" />
+          <input type="text" placeholder="Your last name" />
+          <input type="email" placeholder="Your email" required />
+          <input type="password" placeholder="Set password" required />
+          <button type="submit">Sign up</button>
+        </form>
+      </div>
+    </div>
+    <script src="script.js"></script>
   </body>
 </html>

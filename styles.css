@@ -92,8 +92,10 @@ body {
   background-color: #969696;
 }
 
-.overlay {
-  display: flex;
+.overlay,
+.login-overlay,
+.signUp-overlay {
+  display: none;
   justify-content: center;
   align-items: center;
   position: fixed;
@@ -101,48 +103,75 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #0000007c;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
-.overlay-box {
-  width: 400px;
-  height: auto;
-  padding: 14px 25px;
+.overlay-box,
+.login-box,
+.signUp-box {
+  width: 100%;
+  max-width: 400px;
+  padding: 20px;
   background-color: white;
   border-radius: 5px;
   position: relative;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-.closeBtn {
+.closeBtn,
+.loginCloseBtn,
+.signUpCloseBtn {
   position: absolute;
-  top: 0px;
-  right: 14px;
+  top: 10px;
+  right: 15px;
+  font-size: 18px;
   cursor: pointer;
+  color: #666;
 }
 
-.overlay-box button {
+.overlay-box h3,
+.login-box h3,
+.signUp-box h3 {
+  font-size: 24px;
+  color: #4b3636;
+  margin-bottom: 15px;
+}
+
+.overlay-box p,
+.login-box input,
+.signUp-box input {
+  font-size: 14px;
+  color: #6e6e6e;
+  line-height: 20px;
+  margin-bottom: 12px;
+}
+
+.overlay-box button,
+.login-box button,
+.signUp-box button {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 14px 30px;
   width: 100%;
-  cursor: pointer;
+  padding: 12px;
+  margin-top: 10px;
   border: none;
   border-radius: 5px;
-  font-size: 16px;
-  margin-top: 10px;
   background-color: #c71212;
   color: white;
+  font-size: 16px;
+  cursor: pointer;
 }
 
-.overlay-box p {
-  color: #6e6e6e;
-  line-height: 20px;
-}
-
-.overlay-box h3 {
-  font-size: 24px;
-  color: #4b3636;
+.login-box input,
+.signUp-box input {
+  width: 100%;
+  max-width: 370px;
+  padding: 12px 14px;
+  margin-bottom: 8px;
+  border-radius: 5px;
+  border: none;
+  background-color: #ebebeb;
 }
 
 @media (max-width: 768px) {
@@ -161,5 +190,24 @@ body {
 
   .link-btn {
     margin: 0 auto;
+  }
+
+  .overlay-box {
+    margin: 0px 14px;
+  }
+
+  .login-box,
+  .signUp-box {
+    margin: 0px 10px;
+  }
+
+  .login-box input,
+  .signUp-box input {
+    width: 280px;
+  }
+
+  .login-box button,
+  .signUp-box button {
+    width: 310px;
   }
 }
